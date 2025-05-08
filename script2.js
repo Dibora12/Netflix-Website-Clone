@@ -82,5 +82,5 @@ data.results.foreach{(movie) => {
 }};
 
 });
-
+fetch(requests.fetchPopular)
 
