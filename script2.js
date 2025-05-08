@@ -40,7 +40,7 @@ function truncate(str,n) {
 
     banner.stylebackgroundImage = "url(" + banner_url + setmovie.backdrop_path + ")";
     banner__desc.innerText = truncate(setmovie.overview,150);
-    banner title innertext = setmovie.name;
+    banner_title.innerText = setMovie.name;
 
 });
 
@@ -51,4 +51,36 @@ fetch (requests.fetchNetflixOriginals)
 .then((data) => {
     const headrow = document.getElementById("headrow");
     const row = document.createElement{"div"}
-}
+
+    headrow.appendChild{row};
+
+
+    const title =document.createElemet{"h2"}
+
+
+    title.className = "row_title";
+    title.innerText = "NETFLIX ORIGINALS";
+
+
+    row.appendChild{title};
+
+
+const row_posters = document.createElement{"div"};
+row_posters.className = "row__posters";
+row.appendChild(row_posters);
+
+
+data.results.foreach{(movie) => {
+
+    const poster = document.createElement("img");
+    poster.className = "row__posterLarge";
+    var s = movie.name.replace(/\s+/g, "");
+
+    poster.id = s;
+    poster.src = img_url + movieposter_path;
+    row_posters.appendChild(poster);
+}};
+
+});
+
+
