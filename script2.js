@@ -84,3 +84,18 @@ data.results.foreach{(movie) => {
 });
 fetch(requests.fetchPopular)
 
+.then((data) => {
+    const headRow = document.getElementById("headrow");
+    const row = document.createElement("div");
+
+
+    row.className = "row";
+    row.classList.add{"popularrow"};
+    headrow.appendChild{row};
+
+
+    const title = document.createElement{"h2";
+        title class Name = row__
+    }
+}
+
